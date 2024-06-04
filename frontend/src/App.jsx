@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import TitleCard from './components/TitleCard'
+import NumberLocation from './components/NumberLocation'
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
         <Header />
         <TitleCard />
       </div>
+      <div className='w-full h-16 bg-black'></div>
+      <NumberLocation />
     </div>
   )
 }
