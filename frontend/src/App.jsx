@@ -1,7 +1,13 @@
+import Header from './components/Header'
+import TitleCard from './components/TitleCard'
+
 function App() {
   return (
     <div>
-      <h1>FLASK REACT ZAPPA TEMPLATE!!</h1>
+      <div className='flex flex-col h-screen'>
+        <Header />
+        <TitleCard />
+      </div>
     </div>
   )
 }
