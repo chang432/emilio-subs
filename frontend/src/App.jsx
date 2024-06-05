@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import TitleCard from './components/TitleCard'
-import NumberLocation from './components/NumberLocation'
+import HomePage from './components/HomePage'
+import Bottom from './components/Bottom'
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
         <Header />
         <TitleCard />
       </div>
-      <div className='w-full h-16 bg-black'></div>
-      <NumberLocation />
+      <HomePage />
+      <Bottom />
     </div>
   )
 }

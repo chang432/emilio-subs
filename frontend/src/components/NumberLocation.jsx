@@ -10,7 +10,7 @@ const NumberLocation = () => {
             <div className="flex flex-col space-y-8 w-[500px] h-[200px] items-center justify-center">
                 <div className="flex flex-row space-x-2">
                     <p>Order Now:</p>
-                    <p style={NumberStyle}>+1 617-923-4647</p>
+                    <p style={NumberStyle}>+1 617-232-7070</p>
                 </div>
                 <button className="btn-lg bg-black text-white w-2/3">
                     See Menu

@@ -3,7 +3,7 @@ const Location = () => {
     return (
         <div className="flex flex-col items-center">
             <p>Location</p>
-            <p className="pb-4">6 Bigelow Ave, Watertown, MA 02472</p>
+            <p className="pb-4">1 Centre Street, Brookline, MA 02446</p>
             <div className="mapouter">
                 <div className="gmap_canvas">
                     <iframe
