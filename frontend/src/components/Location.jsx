@@ -13,7 +13,7 @@ const Location = () => {
                     scrolling="no"
                     marginHeight="0"
                     marginWidth="0"
-                    src="https://maps.google.com/maps?width=600&amp;height=250&amp;hl=en&amp;q=6 Bigelow Ave, Watertown, MA 02472&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    src="https://maps.google.com/maps?width=600&amp;height=250&amp;hl=en&amp;q=1 Centre Street, Brookline, MA 02446&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                     ></iframe>
                     <a href="https://embed-googlemap.com">google map embed html</a>
                 </div>
