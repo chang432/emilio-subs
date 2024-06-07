@@ -10,15 +10,27 @@ const HeaderBtnStyle = {
   'color': 'white'
 }
 
-const Header = () => {
+const Header = ({shows}) => {
+
+  function setPage(tabName) {
+    for (var entry of shows) {
+      if (entry[0] === tabName) {
+        entry[1](true)
+      } else {
+        entry[1](false)
+      }
+    }
+
+  }
+
   return (
     <div className="w-full h-32 flex flex-none justify-content justify-between items-center bg-black px-10">
       <h1 className='text-5xl' style={{...LogoStyle}}>SEVENS</h1>
       <div className='space-x-12'>
-        <button style={HeaderBtnStyle}>Home</button>
-        <button style={HeaderBtnStyle}>Menu</button>
-        <button style={HeaderBtnStyle}>About</button>
-        <button style={HeaderBtnStyle}>Reviews</button>
+        <button style={HeaderBtnStyle} onClick={() => setPage("home")}>Home</button>
+        <button style={HeaderBtnStyle} onClick={() => setPage("menu")}>Menu</button>
+        <button style={HeaderBtnStyle} onClick={() => setPage("about")}>About</button>
+        <button style={HeaderBtnStyle} onClick={() => setPage("reviews")}>Reviews</button>
       </div>
     </div>
   )
