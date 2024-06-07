@@ -18,7 +18,7 @@ function App() {
         <Header shows={shows} />
         <TitleCard />
       </div>}
-      {showHome && <HomePage />}
+      {showHome && <HomePage setShowHome={setShowHome} setShowMenu={setShowMenu} />}
       {!showHome && <Header shows={shows} />}
       {showMenu && <Menu />}
       <Bottom />
