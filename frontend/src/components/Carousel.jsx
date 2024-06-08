@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 
 const Carousel = ({ images, labels }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showLabel, setShowLabel] = useState(false);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 3 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 4 : prevIndex - 2));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex >= images.length - 3 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex >= images.length - 4 ? 0 : prevIndex + 2));
   };
 
   const handleImageClick = () => {
@@ -18,16 +23,17 @@ const Carousel = ({ images, labels }) => {
 
   return (
     <div className="h-96 py-8 bg-black relative overflow-hidden">
-      <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentIndex * 27}%)` }}>
+      <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentIndex * 24}%)` }}>
         {images.map((image, index) => (
-          <img key={index} src={image} className="rounded-lg h-80 w-1/4 object-fit cursor-pointer" style={{'margin-left': '2%'}} onClick={handleImageClick}/>
+          <img key={index} src={image} className="rounded-lg h-80 w-1/4 object-fill cursor-pointer" style={{'margin-left': '2%'}} onClick={handleImageClick}/>
         ))}
       </div>
-      <button onClick={handlePrev} className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none">
-        Prev
+      <button onClick={handlePrev} className="absolute top-1/2 left-0 transition-transform duration-200 ease-in-out transform hover:scale-110 active:scale-90 rounded-full ml-3 bg-slate-700/90 text-white/90 -translate-y-1/2 px-4 py-2 focus:outline-none">
+        <FontAwesomeIcon icon={faChevronLeft} size="2xl"/>
       </button>
-      <button onClick={handleNext} className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r focus:outline-none">
-        Next
+      
+      <button onClick={handleNext} className="absolute top-1/2 right-0 transition-transform duration-200 ease-in-out transform hover:scale-110 active:scale-90 rounded-full mr-3 bg-slate-700/90 text-white/90 -translate-y-1/2 px-4 py-2 focus:outline-none">
+        <FontAwesomeIcon icon={faChevronRight} size="2xl"/>
       </button>
     </div>
   );

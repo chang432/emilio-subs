@@ -21,7 +21,7 @@ const TitleCard = () => {
       {/* Title text at the forefront */}
       <div className="flex flex-col justify-center items-center text-white space-y-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <h1 className="text-5xl font-bold">WE'RE BACK!</h1>
-        <h1 className="text-3xl font-bold text-center">open longer hours now 8pm weeknights</h1>
+        <h1 className="text-3xl font-bold text-center">Open longer hours now 8pm weeknights</h1>
         <div className='flex flex-row space-x-5'>
           <div className='text-right'> 
             <p>Mon - Fri</p>

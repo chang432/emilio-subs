@@ -3,6 +3,7 @@ import TitleCard from './components/TitleCard'
 import HomePage from './components/HomePage'
 import Bottom from './components/Bottom'
 import Menu from './components/Menu'
+import ReviewPage from './components/ReviewPage'
 import { useState } from 'react'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {showHome && <HomePage setShowHome={setShowHome} setShowMenu={setShowMenu} />}
       {!showHome && <Header shows={shows} />}
       {showMenu && <Menu />}
+      {showReviews && <ReviewPage />}
       <Bottom />
     </div>
   )

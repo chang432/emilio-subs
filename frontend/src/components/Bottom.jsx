@@ -2,7 +2,6 @@ import tripadvisor from '../assets/tripadvisor.png'
 import instagram from '../assets/insta.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faInstagram,
     faYelp,
     faGoogle
 } from "@fortawesome/free-brands-svg-icons";

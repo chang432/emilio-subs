@@ -20,7 +20,15 @@ const Header = ({shows}) => {
         entry[1](false)
       }
     }
+  }
 
+  function scrollPage() {
+    setPage("home")
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   return (
@@ -29,7 +37,7 @@ const Header = ({shows}) => {
       <div className='space-x-12'>
         <button style={HeaderBtnStyle} onClick={() => setPage("home")}>Home</button>
         <button style={HeaderBtnStyle} onClick={() => setPage("menu")}>Menu</button>
-        <button style={HeaderBtnStyle} onClick={() => setPage("about")}>About</button>
+        <button style={HeaderBtnStyle} onClick={scrollPage}>Contact</button>
         <button style={HeaderBtnStyle} onClick={() => setPage("reviews")}>Reviews</button>
       </div>
     </div>
