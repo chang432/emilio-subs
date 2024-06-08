@@ -40,6 +40,3 @@ const Carousel = ({ images, labels }) => {
 };
 
 export default Carousel;
-
-// 22.5*4 = 90
-// 2*5 = 10
