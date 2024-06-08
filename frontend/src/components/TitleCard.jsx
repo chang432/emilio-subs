@@ -3,7 +3,7 @@ import mainSub from '../assets/mainSub.png';
 
 const titleCardStyle = {
   'opacity': 0.9,
-  'filter': "brightness(50%) contrast(85%) blur(1px)"
+  'filter': "brightness(50%) contrast(85%)"
 }
 
 const TitleCard = () => {
