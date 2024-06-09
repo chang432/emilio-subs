@@ -13,17 +13,17 @@ const NumberLocation = ({setShowHome, setShowMenu}) => {
     }
 
     return (
-        <div className="w-full h-96 flex flex-row items-center justify-evenly">
-            <div className="flex flex-col space-y-8 w-[500px] h-[200px] items-center justify-center">
-                <div className="flex flex-row space-x-2">
+        <div className="w-full h-96 flex flex-wrap flex-row items-center justify-center md:justify-evenly mb-8 md:mb-0">
+            <div className="flex flex-col space-y-4 md:space-y-8 md:w-[500px] md:h-[200px] items-center justify-center">
+                <div className="flex flex-row space-x-2 text-xs md:text-md">
                     <p>Order Now:</p>
                     <p style={NumberStyle}>+1 617-232-7070</p>
                 </div>
-                <button className="btn-lg bg-black text-white w-2/3" onClick={displayMenu}>
+                <button className="btn-sm md:btn-lg bg-black text-white md:w-2/3 text-xs md:text-md" onClick={displayMenu}>
                     See Menu
                 </button>
             </div>
-            <div className="w-0.5 h-32 bg-gray-400"></div>
+            <div className="w-0.5 h-32 bg-gray-400 invisible md:visible"></div>
             <Location />
         </div>
     )

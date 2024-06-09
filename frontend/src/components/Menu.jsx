@@ -12,25 +12,37 @@ const Menu = () => {
     }, []);
 
     return (
-        <div className={`flex flex-row justify-evenly mb-12 ${fadeIn ? 'animate-fade-in' : ''}`}>
-            <div className='w-5/12 flex flex-col'>
-                {Data.map((section, index) => {
-                    if (index === 0) {
+        <div>
+            <div className={`hidden md:flex flex-row justify-evenly mb-12 ${fadeIn ? 'animate-fade-in' : ''}`}>
+                <div className='w-5/12 flex flex-col'>
+                    {Data.map((section, index) => {
+                        if (index === 0) {
+                            return (
+                                <MenuTable key={index} tableData={section.items} name={section.title} />
+                            )
+                        } 
+                    })}
+                </div>
+                <div className='w-5/12 flex flex-col'>
+                    {Data.map((section, index) => {
+                        if (index != 0) {
+                            return (
+                                <MenuTable key={index} tableData={section.items} name={section.title} />
+                            )
+                        } 
+                    })}
+                </div>
+            </div>
+            <div className={`flex md:hidden flex-row justify-evenly mb-8 md:mb-12 ${fadeIn ? 'animate-fade-in' : ''}`}>
+                <div className='w-full flex flex-col mx-4'>
+                    {Data.map((section, index) => {
                         return (
                             <MenuTable key={index} tableData={section.items} name={section.title} />
                         )
-                    } 
-                })}
+                    })}
+                </div>
             </div>
-            <div className='w-5/12 flex flex-col'>
-                {Data.map((section, index) => {
-                    if (index != 0) {
-                        return (
-                            <MenuTable key={index} tableData={section.items} name={section.title} />
-                        )
-                    } 
-                })}
-            </div>
+
         </div>
     );
 };

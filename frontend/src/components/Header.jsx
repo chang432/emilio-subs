@@ -33,13 +33,13 @@ const Header = ({highlights, tabClicked, headerTabHovered, headerTabUnhovered}) 
   }
 
   return (
-    <div className="w-full h-32 flex flex-none justify-content justify-between items-center bg-black px-10">
-      <h1 className='text-5xl' style={{...SevensLogoStyle}}>SEVENS</h1>
-      <div className='space-x-12'>
-        <button style={TabHomeStyle} onClick={() => tabClicked('home')} onMouseEnter={() => headerTabHovered('home')} onMouseLeave={() => headerTabUnhovered('home')}>Home</button>
-        <button style={TabMenuStyle} onClick={() => tabClicked('menu')} onMouseEnter={() => headerTabHovered('menu')} onMouseLeave={() => headerTabUnhovered('menu')}>Menu</button>
-        <button style={TabContactStyle} onClick={() => tabClicked('contact')} onMouseEnter={() => headerTabHovered('contact')} onMouseLeave={() => headerTabUnhovered('contact')}>Contact</button>
-        <button style={TabReviewsStyle} onClick={() => tabClicked('reviews')} onMouseEnter={() => headerTabHovered('reviews')} onMouseLeave={() => headerTabUnhovered('reviews')}>Reviews</button>
+    <div className="w-full h-24 md:h-32 flex flex-none justify-content justify-between items-center bg-black px-4 md:px-10">
+      <h1 className='text-2xl md:text-5xl' style={{...SevensLogoStyle}}>SEVENS</h1>
+      <div className='space-x-4 md:space-x-12'>
+        <button className='text-xs md:text-lg' style={TabHomeStyle} onClick={() => tabClicked('home')} onMouseEnter={() => headerTabHovered('home')} onMouseLeave={() => headerTabUnhovered('home')}>Home</button>
+        <button className='text-xs md:text-lg' style={TabMenuStyle} onClick={() => tabClicked('menu')} onMouseEnter={() => headerTabHovered('menu')} onMouseLeave={() => headerTabUnhovered('menu')}>Menu</button>
+        <button className='text-xs md:text-lg' style={TabContactStyle} onClick={() => tabClicked('contact')} onMouseEnter={() => headerTabHovered('contact')} onMouseLeave={() => headerTabUnhovered('contact')}>Contact</button>
+        <button className='text-xs md:text-lg' style={TabReviewsStyle} onClick={() => tabClicked('reviews')} onMouseEnter={() => headerTabHovered('reviews')} onMouseLeave={() => headerTabUnhovered('reviews')}>Reviews</button>
       </div>
     </div>
   )
