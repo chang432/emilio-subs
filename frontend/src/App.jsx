@@ -20,6 +20,8 @@ function App() {
   const allTabHighlights = [['home', setHighlightHome], ['menu', setHighlightMenu], ['contact', setHighlightContact], ['reviews', setHighlightReviews]];
   const highlights = [highlightHome, highlightMenu, highlightContact, highlightReviews]
 
+  const [dynamicScreenHeight, setDynamicScreenHeight] = useState(window.innerHeight)
+
   function setPage(tabName) {
     for (var entry of shows) {
       if (entry[0] === tabName) {
@@ -33,7 +35,8 @@ function App() {
   function scrollPage() {
     setPage("home")
     window.scrollBy({
-      top: parseInt(document.getElementById('HeaderTitleCardDiv').offsetHeight, 10),
+      // top: parseInt(document.getElementById('HeaderTitleCardDiv').offsetHeight, 10),
+      top: dynamicScreenHeight,
       left: 0,
       behavior: 'smooth',
     });
@@ -94,7 +97,7 @@ function App() {
   }
 
   const HeaderTitleCardStyle = {
-    'height': 'calc(var(--vh, 1vh) * 100)'
+    'height': dynamicScreenHeight
   }
 
   // fix mobile viewport height problem
@@ -103,9 +106,10 @@ function App() {
     if (typeof window !== 'undefined') {
       // Handler to call on window resize
       function handleResize() {
-        let vh = window.innerHeight * 0.01
+        // let vh = window.innerHeight * 0.01
         // console.log("resizing, new full height: ", vh*100)
-        document.documentElement.style.setProperty('--vh', `${vh}px`)
+        // document.documentElement.style.setProperty('--vh', `${vh}px`)
+        setDynamicScreenHeight(window.innerHeight)
       }
 
       // Add event listener
