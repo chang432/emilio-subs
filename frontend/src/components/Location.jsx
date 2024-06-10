@@ -1,7 +1,7 @@
 
 const Location = () => {
     return (
-        <div className="flex flex-col items-center text-sm md:text-md mx-2 md:mx-0">
+        <div className="flex flex-col items-center text-xs md:text-lg mx-2 md:mx-0">
             <p>Location</p>
             <p className="pb-4">1 Centre Street, Brookline, MA 02446</p>
             <div className="hidden md:block mapouter">

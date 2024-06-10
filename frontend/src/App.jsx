@@ -4,7 +4,7 @@ import HomePage from './components/HomePage'
 import Bottom from './components/Bottom'
 import Menu from './components/Menu'
 import ReviewPage from './components/ReviewPage'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [showHome, setShowHome] = useState(true);
@@ -33,7 +33,7 @@ function App() {
   function scrollPage() {
     setPage("home")
     window.scrollBy({
-      top: window.innerHeight,
+      top: parseInt(document.getElementById('HeaderTitleCardDiv').offsetHeight, 10),
       left: 0,
       behavior: 'smooth',
     });
@@ -84,9 +84,35 @@ function App() {
     }
   }
 
+  const HeaderTitleCardStyle = {
+    'height': 'calc(var(--vh, 1vh) * 100)'
+  }
+
+  // fix mobile viewport height problem
+  useEffect(() => {
+    // only execute all the code below in client side
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      function handleResize() {
+        let vh = window.innerHeight * 0.01
+        console.log("resizing, new full height: ", vh*100)
+        document.documentElement.style.setProperty('--vh', `${vh}px`)
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <div>
-      {showHome && <div className='flex flex-col h-screen'>
+      {showHome && <div id='HeaderTitleCardDiv' className='flex flex-col' style={HeaderTitleCardStyle}>
         <Header highlights={highlights} tabClicked={tabClicked} headerTabHovered={headerTabHovered} headerTabUnhovered={headerTabUnhovered} />
         <TitleCard />
       </div>}
