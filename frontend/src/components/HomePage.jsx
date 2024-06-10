@@ -13,11 +13,11 @@ import p8 from '../assets/p8.png'
 const images = [p1,p2,p3,p4,p5,p6,p7,p8];
 const image_labels = ["label1", "label2", "label3", "label4", "label5", "label6", "label7", "label8"];
 
-const HomePage = ({setShowHome, setShowMenu}) => {
+const HomePage = ({displayMenu}) => {
     return(
         <div>
             <div className='w-full h-16 bg-black'></div>
-            <NumberLocation setShowHome={setShowHome} setShowMenu={setShowMenu} />
+            <NumberLocation displayMenu={displayMenu}/>
             <Carousel images={images} labels={image_labels}/>
             <div className='h-20 bg-white'></div>
         </div>

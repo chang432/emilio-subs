@@ -4,13 +4,7 @@ const NumberStyle = {
     'color': '#D90606'
 }
 
-const NumberLocation = ({setShowHome, setShowMenu}) => {
-
-    function displayMenu() {
-        setShowHome(false)
-        setShowMenu(true)
-        window.scrollTo(0, 0)
-    }
+const NumberLocation = ({displayMenu}) => {
 
     return (
         <div className="w-full h-96 flex flex-wrap flex-row items-center justify-center md:justify-evenly mb-8 md:mb-0">

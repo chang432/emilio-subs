@@ -39,6 +39,15 @@ function App() {
     });
   }
 
+  function displayMenu() {
+    setHighlightHome(false)
+    setHighlightMenu(true)
+    setCurrentHighlightTab('menu')
+    setShowHome(false)
+    setShowMenu(true)
+    window.scrollTo(0, 0)
+}
+
   function tabClicked(tabName) {
 
     if (tabName === "contact") {
@@ -95,7 +104,7 @@ function App() {
       // Handler to call on window resize
       function handleResize() {
         let vh = window.innerHeight * 0.01
-        console.log("resizing, new full height: ", vh*100)
+        // console.log("resizing, new full height: ", vh*100)
         document.documentElement.style.setProperty('--vh', `${vh}px`)
       }
 
@@ -116,7 +125,7 @@ function App() {
         <Header highlights={highlights} tabClicked={tabClicked} headerTabHovered={headerTabHovered} headerTabUnhovered={headerTabUnhovered} />
         <TitleCard />
       </div>}
-      {showHome && <HomePage setShowHome={setShowHome} setShowMenu={setShowMenu} />}
+      {showHome && <HomePage displayMenu={displayMenu} />}
       {!showHome && <Header highlights={highlights} tabClicked={tabClicked} headerTabHovered={headerTabHovered} headerTabUnhovered={headerTabUnhovered} />}
       {showMenu && <Menu />}
       {showReviews && <ReviewPage />}
