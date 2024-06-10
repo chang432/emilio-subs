@@ -22,15 +22,15 @@ const Bottom = () => {
                     <p className="">Closed</p>
                 </div>
             </div>
-            <div className='text-center mb-4 md:mb-0'>
+            <div className='text-center mb-6 md:mb-0'>
                 <p style={NumberStyle}>+1 617-232-7070</p>
                 <p>1 Centre Street, Brookline, MA 02446</p>
             </div>
             <div className='flex flex-row space-x-8'>
-                <img className='w-6 h-6 cursor-pointer' src={instagram} />
-                <img className='w-6 h-6 cursor-pointer' src={yelp} />
-                <img className='w-6 h-6 cursor-pointer' src={google} />
-                <img className='w-9 h-6 cursor-pointer' src={tripadvisor} />
+                <img className='w-4 h-4 md:w-6 md:h-6 cursor-pointer' src={instagram} />
+                <img className='w-4 h-4 md:w-6 md:h-6 cursor-pointer' src={yelp} />
+                <img className='w-4 h-4 md:w-6 md:h-6 cursor-pointer' src={google} />
+                <img className='w-6 h-4 md:w-9 md:h-6 cursor-pointer' src={tripadvisor} />
             </div>
         </div>
     )
