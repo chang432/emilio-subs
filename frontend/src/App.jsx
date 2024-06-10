@@ -22,6 +22,12 @@ function App() {
 
   const [dynamicScreenHeight, setDynamicScreenHeight] = useState(window.innerHeight)
 
+  const [homeFadeIn, setHomeFadeIn] = useState(false);
+
+  useEffect(() => {
+    setHomeFadeIn(true);
+  }, []);
+
   function setPage(tabName) {
     for (var entry of shows) {
       if (entry[0] === tabName) {
@@ -127,7 +133,7 @@ function App() {
     <div>
       {showHome && <div id='HeaderTitleCardDiv' className='flex flex-col' style={HeaderTitleCardStyle}>
         <Header highlights={highlights} tabClicked={tabClicked} headerTabHovered={headerTabHovered} headerTabUnhovered={headerTabUnhovered} />
-        <TitleCard />
+        <TitleCard homeFadeIn={homeFadeIn} />
       </div>}
       {showHome && <HomePage displayMenu={displayMenu} />}
       {!showHome && <Header highlights={highlights} tabClicked={tabClicked} headerTabHovered={headerTabHovered} headerTabUnhovered={headerTabUnhovered} />}

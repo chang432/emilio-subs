@@ -7,7 +7,7 @@ const titleCardStyle = {
   'filter': "brightness(50%) contrast(85%)"
 }
 
-const TitleCard = () => {
+const TitleCard = ({homeFadeIn}) => {
 
   const [animate, setAnimate] = useState(false);
 
@@ -16,7 +16,7 @@ const TitleCard = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className={`relative w-full h-full overflow-hidden ${homeFadeIn ? 'animate-fade-in' : ''}`}>
       {/* Background image with reduced opacity */}
       <div className="absolute inset-0 z-0">
         <img

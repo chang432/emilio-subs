@@ -34,7 +34,7 @@ const Header = ({highlights, tabClicked, headerTabHovered, headerTabUnhovered}) 
 
   return (
     <div className="w-full h-32 flex flex-none flex-wrap justify-center md:justify-between items-center bg-black px-4 md:px-10 py-3">
-      <h1 className='text-5xl mt-2 md:mt-0' style={{...SevensLogoStyle}}>SEVENS</h1>
+      <h1 className='cursor-pointer text-5xl mt-2 md:mt-0' onClick={() => tabClicked('home')} style={{...SevensLogoStyle}}>SEVENS</h1>
       <div className='space-x-6 md:space-x-12 mb-2 md:mb-0'>
         <button className='text-xs md:text-lg' style={TabHomeStyle} onClick={() => tabClicked('home')} onMouseEnter={() => headerTabHovered('home')} onMouseLeave={() => headerTabUnhovered('home')}>Home</button>
         <button className='text-xs md:text-lg' style={TabMenuStyle} onClick={() => tabClicked('menu')} onMouseEnter={() => headerTabHovered('menu')} onMouseLeave={() => headerTabUnhovered('menu')}>Menu</button>
