@@ -4,7 +4,7 @@ const Location = () => {
         <div className="flex flex-col items-center text-xs md:text-lg mx-2 md:mx-0">
             <p>Location</p>
             <p className="pb-4">1 Centre Street, Brookline, MA 02446</p>
-            <div className="hidden md:block mapouter">
+            <div className="hidden md:block mapouter1">
                 <div className="gmap_canvas">
                     <iframe
                     className="gmap_iframe"
@@ -17,9 +17,9 @@ const Location = () => {
                     ></iframe>
                     <a href="https://embed-googlemap.com">google map embed html</a>
                 </div>
-                <style>{`.mapouter{position:relative;text-align:right;width:500px;height:200px;}.gmap_canvas{overflow:hidden;background:none!important;width:100%;height:200px;}.gmap_iframe{height:200px!important;}`}</style>
+                <style>{`.mapouter1{position:relative;text-align:right;width:500px;height:200px;}.gmap_canvas{overflow:hidden;background:none!important;width:100%;height:200px;}.gmap_iframe{height:200px!important;}`}</style>
             </div>
-            <div className="block md:hidden mapouter">
+            <div className="block md:hidden mapouter2">
                 <div className="gmap_canvas">
                     <iframe
                     className="gmap_iframe"
@@ -32,7 +32,7 @@ const Location = () => {
                     ></iframe>
                     <a href="https://embed-googlemap.com">google map embed html</a>
                 </div>
-                <style>{`.mapouter{position:relative;text-align:right;width:400px;height:200px;}.gmap_canvas{overflow:hidden;background:none!important;width:100%;height:200px;}.gmap_iframe{height:200px!important;}`}</style>
+                <style>{`.mapouter2{position:relative;text-align:right;width:400px;height:200px;}.gmap_canvas{overflow:hidden;background:none!important;width:100%;height:200px;}.gmap_iframe{height:200px!important;}`}</style>
             </div>
         </div>
     )

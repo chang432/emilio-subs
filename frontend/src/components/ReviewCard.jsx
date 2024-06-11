@@ -10,7 +10,7 @@ const ReviewCard = ({logo, stars, review, author, pic}) => {
                 <p className="text-white w-80 md:w-[680px]">"{review}"</p>
                 <p className="text-white text-right mr-8">- {author}</p>
             </div>
-            <img src={pic} className="w-96 object-cover rounded-lg" />
+            <img src={pic} className="w-96 object-cover rounded-sm" />
         </div>
     )
 }
