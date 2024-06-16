@@ -17,14 +17,14 @@ const Bottom = () => {
                     <p className="">Sun</p>
                 </div>
                 <div className='text-left'> 
-                    <p className="">11:00AM to 6:00PM</p>
-                    <p className="">11:00AM to 4:00PM</p>
-                    <p className="">Closed</p>
+                    <p>9:00AM to 8:00PM</p>
+                    <p>10:00AM to 6:00PM</p>
+                    <p>Closed</p>
                 </div>
             </div>
             <div className='text-center mb-6 md:mb-0'>
                 <p style={NumberStyle}>+1 617-232-7070</p>
-                <p>1 Centre Street, Brookline, MA 02446</p>
+                <p>6 Bigelow Ave, Watertown, MA 02472</p>
             </div>
             <div className='flex flex-row space-x-8'>
                 <img className='w-4 h-4 md:w-6 md:h-6 cursor-pointer' src={instagram} />

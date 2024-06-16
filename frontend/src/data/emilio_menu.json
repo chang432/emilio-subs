@@ -1,60 +1,122 @@
 [
     {
-        "Steak Subs": [
-            {
-                "Plain": {
-                    "sm": 9.00,
-                    "lg": 9.00
-                }
-            },
-            {
-                "Cheese": {
-                    "sm": 9.25,
-                    "lg": 9.25
-                }
-            },
-            {
-                "Pepper": {
-                    "sm": 9.25,
-                    "lg": 9.25
-                }
-            },
-            {
-                "Onion": {
-                    "sm": 9.25,
-                    "lg": 9.25
-                }
-            },
-            {
-                "Mushroom": {
-                    "sm": 9.25,
-                    "lg": 9.25
-                }
-            },
-            {
-                "Egg": {
-                    "sm": 9.25,
-                    "lg": 9.25
-                }
-            },
-            {
-                "2-Way Combo": {
-                    "sm": 9.50,
-                    "lg": 9.50
-                }
-            },
-            {
-                "3 Way Combo": {
-                    "sm": 9.75,
-                    "lg": 9.75
-                }
-            },
-            {
-                "Bomb": {
-                    "sm": 9.75,
-                    "lg": 9.75
-                }
-            }
+      "title": "Steak Subs",
+      "items": [
+        { "name": "Plain", "price_sm": "$9.00", "price_lg": "$10.00" },
+        { "name": "Cheese", "price_sm": "$9.25", "price_lg": "$10.75" },
+        { "name": "Pepper", "price_sm": "$9.25", "price_lg": "$10.75" },
+        { "name": "Onion", "price_sm": "$9.25", "price_lg": "$10.75" },
+        { "name": "Mushroom", "price_sm": "$9.25", "price_lg": "$10.75" },
+        { "name": "Egg", "price_sm": "$9.25", "price_lg": "$10.75" },
+        { "name": "2-Way Combo", "price_sm": "$9.75", "price_lg": "$11.25" },
+        { "name": "3 Way Combo", "price_sm": "$9.75", "price_lg": "$11.25" },
+        { "name": "Bomb", "price_sm": "$9.75", "price_lg": "$11.25" }
+      ]
+    },
+    {
+      "title": "Egg Subs",
+      "items": [
+        { "name": "Pepper & Egg", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Ham & Egg", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Pepperoni & Egg", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Salami & Egg", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Sausage & Egg", "price_sm": "$7.75", "price_lg": "$8.75" }
+      ]
+    },
+    {
+      "title": "Hot Subs",
+      "items": [
+        { "name": "Chicken Cutlet", "price_sm": "$9.25", "price_lg": "$10.25" },
+        { "name": "Eggplant", "price_sm": "$9.25", "price_lg": "$10.25" },
+        { "name": "Meatball", "price_sm": "$8.00", "price_lg": "$9.50" },
+        { "name": "Italian Sausage", "price_sm": "$8.00", "price_lg": "$9.50" },
+        { "name": "Sausage & Pepper", "price_sm": "$8.00", "price_lg": "$9.50" },
+        { "name": "Sausage Combo", "price_sm": "$8.00", "price_lg": "$9.50" },
+        { "name": "Hamburger", "price_sm": "$6.25", "price_lg": "$8.25" },
+        { "name": "Cheeseburger", "price_sm": "$6.75", "price_lg": "$8.75" },
+        { "name": "Hot Pastrami (Lg only)", "price_sm": "", "price_lg": "$9.50" },
+        { "name": "BLT", "price_sm": "$8.00", "price_lg": "$8.75" },
+        { "name": "Hot Veggie", "price_sm": "$8.00", "price_lg": "$8.75" }
+      ]
+    },
+    {
+      "title": "Cold Subs",
+      "items": [
+        { "name": "American", "price_sm": "$8.00", "price_lg": "$9.50" },
+        { "name": "Italian", "price_sm": "$8.00", "price_lg": "$9.50" },
+        { "name": "Salami & Cheese", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Ham & Cheese", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Ham & Swiss", "price_sm": "$7.75", "price_lg": "$8.75" },
+        { "name": "Ham & Turkey", "price_sm": "$8.95", "price_lg": "$9.50" },
+        { "name": "Bologna & Cheese", "price_sm": "$7.25", "price_lg": "$8.75" },
+        { "name": "Roast Beef", "price_sm": "$8.95", "price_lg": "$9.50" },
+        { "name": "Turkey", "price_sm": "$8.25", "price_lg": "$9.50" },
+        { "name": "Chicken Salad", "price_sm": "$8.25", "price_lg": "$9.50" },
+        { "name": "Tuna", "price_sm": "$8.25", "price_lg": "$9.50" },
+        { "name": "Crabmeat", "price_sm": "$8.25", "price_lg": "$9.50" },
+        { "name": "Veggie", "price_sm": "$8.00", "price_lg": "$9.50" }
+      ]
+    },
+    {
+        "title": "Pasta Dishes",
+        "items": [
+          { "name": "Lasagna", "price_sm": "", "price_lg": "$10.50" },
+          { "name": "w/ *chicken cutlets", "price_sm": "", "price_lg": "$13.50" },
+          { "name": "w/ meatballs", "price_sm": "", "price_lg": "$12.50" },
+          { "name": "w/ sausages", "price_sm": "", "price_lg": "$13.50" },
+          { "name": "w/ eggplant", "price_sm": "", "price_lg": "$13.50" },
+          { "name": "Ziti, Shells, Spaghetti", "price_sm": "", "price_lg": "$8.00" },
+          { "name": "w/ *chicken cutlets", "price_sm": "", "price_lg": "$12.00" },
+          { "name": "w/ meatballs", "price_sm": "", "price_lg": "$10.50" },
+          { "name": "w/ sausages", "price_sm": "", "price_lg": "$12.00" },
+          { "name": "w/ eggplant", "price_sm": "", "price_lg": "$12.00" },
+          { "name": "Ravioli", "price_sm": "", "price_lg": "$9.00" },
+          { "name": "w/ *chicken cutlets", "price_sm": "", "price_lg": "$12.50" },
+          { "name": "w/ meatballs", "price_sm": "", "price_lg": "$11.50" },
+          { "name": "w/ sausages", "price_sm": "", "price_lg": "$12.50" },
+          { "name": "w/ eggplant", "price_sm": "", "price_lg": "$12.50" }
         ]
-    }
-]
+      },
+      {
+        "title": "Dinners",
+        "items": [
+          { "name": "*Chicken Finger (Fries & Salad)", "price_sm": "", "price_lg": "$14.00" },
+          { "name": "*Chicken Wing (Fries & Onion Rings)", "price_sm": "", "price_lg": "$14.00" },
+          { "name": "*Chicken Cutlet Parmigiana (Choice of Pasta or Salad)", "price_sm": "", "price_lg": "$14.50" }
+        ]
+      },
+      {
+        "title": "Side Orders",
+        "items": [
+          { "name": "Pint Sauce", "price_sm": "", "price_lg": "$4.00" },
+          { "name": "*Hamburger", "price_sm": "", "price_lg": "$4.75" },
+          { "name": "*Cheeseburger", "price_sm": "", "price_lg": "$5.00" },
+          { "name": "*Bacon Cheeseburger", "price_sm": "", "price_lg": "$6.50" },
+          { "name": "Meatballs", "price_sm": "", "price_lg": "$1.50 ea." },
+          { "name": "Sausages", "price_sm": "", "price_lg": "$3.00 ea." },
+          { "name": "Mozzarella Sticks", "price_sm": "", "price_lg": "$5.50" },
+          { "name": "French Fries", "price_sm": "$4.25", "price_lg": "$5.50" },
+          { "name": "Spicy Fries", "price_sm": "$5.25", "price_lg": "$6.00" },
+          { "name": "*Chicken Cutlets", "price_sm": "$9.25", "price_lg": "$10.25" },
+          { "name": "Eggplant", "price_sm": "$9.25", "price_lg": "$10.25" },
+          { "name": "*Chicken Wings", "price_sm": "$8.75", "price_lg": "$9.75" },
+          { "name": "*Chicken Fingers", "price_sm": "$8.75", "price_lg": "$9.75" },
+          { "name": "Onion Rings", "price_sm": "$5.50", "price_lg": "$6.50" },
+          { "name": "Home Made Soup", "price_sm": "$4.00 (Cup)", "price_lg": "$7.25 (Bowl)" }
+        ]
+      },
+      {
+        "title": "Salads",
+        "items": [
+          { "name": "Garden", "price_sm": "", "price_lg": "$7.50" },
+          { "name": "Antipasto", "price_sm": "", "price_lg": "$10.75" },
+          { "name": "Greek", "price_sm": "", "price_lg": "$9.50" },
+          { "name": "Chef", "price_sm": "", "price_lg": "$9.50" },
+          { "name": "Tuna", "price_sm": "", "price_lg": "$9.50" },
+          { "name": "Crabmeat", "price_sm": "", "price_lg": "$9.50" },
+          { "name": "Chicken Salad", "price_sm": "", "price_lg": "$9.50" },
+          { "name": "Sliced Chicken", "price_sm": "", "price_lg": "$9.50" }
+        ]
+      }
+  ]
+  

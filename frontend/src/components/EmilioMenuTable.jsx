@@ -1,31 +1,27 @@
-// import React from 'react';
-// import menuData from '../data/menu.json';
+import React from 'react';
 
-// const MenuTable = () => {
-//     const subs = menuData[0]["Steak Subs"];
+const MenuTable = ({tableData, title}) => {
+    // const subs = subsData.subs.items;
 
-//     return (
-//         <div className="w-7/12 p-4 border">
-//             <div className="text-center text-2xl font-bold mb-4">
-//                 Steak Subs
-//             </div>
-//             <div className="grid grid-cols-3 text-center font-semibold mb-2">
-//                 <div></div>
-//                 <div>sm.</div>
-//                 <div>lg.</div>
-//             </div>
-//             {subs.map((sub, index) => {
-//                 const [name, prices] = Object.entries(sub)[0];
-//                 return (
-//                     <div key={index} className="grid grid-cols-3 text-center mb-2">
-//                         <div>{name}</div>
-//                         <div>${prices.sm.toFixed(2)}</div>
-//                         <div>${prices.lg.toFixed(2)}</div>
-//                     </div>
-//                 );
-//             })}
-//         </div>
-//     );
-// };
+    return (
+        <div className="w-full mt-8 md:mt-12 p-4 pt-10 border border-black self-start">
+            <div className="text-center text-lg md:text-2xl font-bold mb-8">
+                {title}
+            </div>
+            <div className="grid grid-cols-4 text-center font-semibold mb-4">
+                <div className='col-span-2'></div>
+                <div>sm.</div>
+                <div>lg.</div>
+            </div>
+            {tableData.map((entry, index) => (
+                <div key={index} className="mb-4 pb-4 grid grid-cols-4 text-center justify-between">
+                    <div className="col-span-2 text-xs md:text-sm font-semibold text-left pl-8">{entry.name}</div>
+                    <div className="text-xs md:text-sm">{entry.price_sm}</div>
+                    <div className="text-xs md:text-sm">{entry.price_lg}</div>
+                </div>
+            ))}
+        </div>
+    );
+};
 
-// export default MenuTable;
+export default MenuTable;
